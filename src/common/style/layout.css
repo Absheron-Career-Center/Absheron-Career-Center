@@ -1,0 +1,10 @@
+.Primary-Navbar {
+    background-color: var(--white-color);
+    margin: var(--safe-place);
+    border-radius: var(--main-radius);
+    height: 75px;
+    display: flex;
+    align-items: center;
+    padding-inline: var(--safe-place);
+    box-shadow: var(--main-shadow);
+}
