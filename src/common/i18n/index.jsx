@@ -1,4 +1,5 @@
 import { createContext, useContext, useState, useEffect } from 'react';
+import languageData from '../utils/languageData'; 
 
 const LanguageContext = createContext();
 
@@ -7,11 +8,10 @@ export const useLanguage = () => {
 };
 
 export const LanguageProvider = ({ children }) => {
-
-    const [language, setLanguage] = useState(() => {
+  const [language, setLanguage] = useState(() => {
     if (typeof window !== 'undefined') {
       const savedLanguage = localStorage.getItem('language');
-      return savedLanguage ? savedLanguage : 'en';
+      return savedLanguage || 'en';
     }
     return 'en';
   });
@@ -20,10 +20,13 @@ export const LanguageProvider = ({ children }) => {
     if (typeof window !== 'undefined') {
       localStorage.setItem('language', language);
     }
-  }, [language]); 
+  }, [language]);
+
+  const currentLangObj = languageData.find((lang) => lang.code === language);
+  const translations = currentLangObj?.translations || {};
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage }}>
+    <LanguageContext.Provider value={{ language, setLanguage, translations }}>
       {children}
     </LanguageContext.Provider>
   );

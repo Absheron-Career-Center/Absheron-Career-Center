@@ -1,0 +1,17 @@
+.Ticker-Group {
+    display: flex;
+    position: relative;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.Ticker-Group p {
+    font-size: var(--font-12px);
+}
+
+.Ticker-Group:hover .Main-Popup {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
