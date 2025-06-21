@@ -29,6 +29,8 @@
   font-size: var(--font-14px);
   font-weight: 500;
   padding-bottom: 3px;
+  
+  
 }
 
 .Main-Button::before {
@@ -90,12 +92,14 @@
   justify-content: center;
   gap: var(--inner-safe-place);
   border: 1px solid var( --low-shade-light-gray-color);
+  animation: fade-in-down 0.7s ease 1;
+  -webkit-animation: fade-in-down 0.7s ease 1;
 }
 
 
 
 .Popup-Item {
-  padding-inline: var(--inner-safe-gap);
+  padding-inline: var(--safe-place);
   font-size: var(--font-12px);
   height: var(--popup-inner-height);
   cursor: pointer;
@@ -108,14 +112,14 @@
   transition: all 0.4s;
   border: 1px solid var( --low-shade-light-gray-color);
   text-align: center;
-
+  animation: fade-in-down 1s ease 1;
+  -webkit-animation: fade-in-down 1s ease 1;
 }
 
 .Popup-Item:hover {
- background: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color));
-opacity: 0.3;
-color: var(--white-color);
+color: var(--primary-color);
 transition: all 0.4s;
+border: 1px solid var(--primary-color-half-opacity);
 }
 
 .Popup-Item.active {
@@ -123,17 +127,6 @@ transition: all 0.4s;
   color: var(--white-color);
   border: none;
 
-}
-
-.Ticker-Group {
-  position: relative;
-  cursor: pointer;
-}
-
-.language-trigger {
-  display: flex;
-  align-items: center;
-  gap: 8px;
 }
 
 .Main-Popup {
@@ -152,3 +145,6 @@ transition: all 0.4s;
   border: 1px solid var(--low-shade-light-gray-color);
 }
 
+.active-icon {
+  filter: var(--primary-color-filter);
+}

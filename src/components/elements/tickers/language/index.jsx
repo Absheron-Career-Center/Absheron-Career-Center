@@ -32,25 +32,70 @@ const LanguageTicker = () => {
   }, []);
 
   return (
-    <div className="Ticker-Group" ref={popupRef}>
-      <div className="language-trigger" onClick={togglePopup}>
-        <img src={LanguageIcon} className="No-Select" />
-        <p>{translations.chooseLanguage}</p>
+    <div className="Ticker-Group Ticker-Language" ref={popupRef}>
+      <div className="Ticker-trigger" onClick={togglePopup}>
+        <img
+          src={LanguageIcon}
+          className={`No-Select ${isOpen ? 'active-icon' : ''}`}
+        />
+
+
       </div>
 
-      {isOpen && (
-        <div className="Main-Popup">
-          {languageData.map((lang) => (
-            <div
-              key={lang.code}
-              className={`Popup-Item ${language === lang.code ? 'active' : ''}`}
-              onClick={() => handleChange(lang.code)}
-            >
-              {lang.label}
-            </div>
-          ))}
-        </div>
-      )}
+{isOpen && (
+  <div className="Main-Popup">
+    <div
+      className={`Popup-Item ${language === 'en' ? 'active' : ''}`}
+      onClick={() => handleChange('en')}
+    >
+      {translations.englishLan}
+    </div>
+    <div
+      className={`Popup-Item ${language === 'tr' ? 'active' : ''}`}
+      onClick={() => handleChange('tr')}
+    >
+      {translations.turkishLan}
+    </div>
+    <div
+      className={`Popup-Item ${language === 'ru' ? 'active' : ''}`}
+      onClick={() => handleChange('ru')}
+    >
+      {translations.russianLan}
+    </div>
+    <div
+      className={`Popup-Item ${language === 'az' ? 'active' : ''}`}
+      onClick={() => handleChange('az')}
+    >
+      {translations.azerbaijaniLan}
+    </div>
+    <div
+      className={`Popup-Item ${language === 'es' ? 'active' : ''}`}
+      onClick={() => handleChange('es')}
+    >
+      {translations.spanishLan}
+    </div>
+    <div
+      className={`Popup-Item ${language === 'zh' ? 'active' : ''}`}
+      onClick={() => handleChange('zh')}
+    >
+      {translations.chineseLan}
+    </div>
+    <div
+      className={`Popup-Item ${language === 'de' ? 'active' : ''}`}
+      onClick={() => handleChange('de')}
+    >
+      {translations.germanLan}
+    </div>
+    <div
+      className={`Popup-Item ${language === 'fr' ? 'active' : ''}`}
+      onClick={() => handleChange('fr')}
+    >
+      {translations.frenchLan}
+    </div>
+  </div>
+)}
+
+
     </div>
   );
 };

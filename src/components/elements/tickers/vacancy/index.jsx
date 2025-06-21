@@ -6,9 +6,9 @@ const VacancyTicker = () => {
   const { translations } = useLanguage();
 
   return (
-    <div className="Ticker-Group">
+    <div className="Ticker-Group Ticker-Vacancy">
       <img src={VacancyTickerIcon} className="No-Select" />
-      <p>{translations.vacancyTitle}</p>
+      <p>IT Helpdesk (Texnik) VAKANSİYA</p>
     </div>
   );
 };
