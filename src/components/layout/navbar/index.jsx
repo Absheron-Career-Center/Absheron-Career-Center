@@ -1,15 +1,3 @@
-// const handleChangeLanguage = (lang) => {
-//   setLanguage(lang);
-//   setShowPopup(false);
-//   setIsMobileMenuOpen(false);
-// };
-
-// const { language, setLanguage } = useLanguage();
-// const [showPopup, setShowPopup] = useState(false);
-
-// import { useLanguage } from '../../../common/i18n/languageContext';
-// import languageData from '../../../common/utils/languageData';
-
 import React, { useEffect, useState } from 'react';
 import '../../../common/style/root.css';
 import MainButton from '../../elements/buttons';
@@ -19,6 +7,12 @@ import VacancyTicker from '../../elements/tickers/vacancy';
 import LanguageTicker from '../../elements/tickers/language';
 import ThemeTicker from '../../elements/tickers/theme';
 import LogoMark from '../../elements/logo';
+import AboutUsItem from '../../elements/sections/aboutUs';
+import OpportunityItem from '../../elements/sections/opportunity';
+import ActivitiesItem from '../../elements/sections/activities';
+import BlogPostItem from '../../elements/sections/blogPost';
+import ContactItem from '../../elements/sections/contact';
+
 
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
@@ -55,6 +49,11 @@ const Navbar = () => {
                         <LogoMark />
                     </div>
                     <div className="Nav-Primary-Last-Section">
+                        <AboutUsItem />
+                        <OpportunityItem />
+                        <ActivitiesItem />
+                        <BlogPostItem />
+                        <ContactItem />
                         <MainButton />
                     </div>
                 </div>

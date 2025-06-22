@@ -71,7 +71,7 @@ const ThemeTicker = () => {
       </div>
 
       {isOpen && (
-        <div className="Main-Popup">
+        <div className="Main-Popup Main-Popup-Right">
           <div
             className={`Popup-Item ${theme === 'dark' ? 'active' : ''}`}
             onClick={() => handleThemeChange('dark')}

@@ -15,6 +15,13 @@ const languageData = [
       lightTheme: 'Light',
       darkTheme: 'Dark',
       autoTheme: 'Auto',
+      aboutUsItem: 'About us',
+      opportunityItem: 'Career opportunities',
+      activitiesItem: 'Our activities',
+      blogPostItem: 'Blog Posts',
+      contactItem: 'Contact us',
+      exhibitions: 'Exhibitions',
+      events: 'Events',
     },
   },
   {

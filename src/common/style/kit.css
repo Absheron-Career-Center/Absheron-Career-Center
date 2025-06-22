@@ -29,8 +29,8 @@
   font-size: var(--font-14px);
   font-weight: 500;
   padding-bottom: 3px;
-  
-  
+
+
 }
 
 .Main-Button::before {
@@ -59,9 +59,6 @@
   -o-user-drag: none;
 }
 
-
-
-
 .Main-Popup::before {
   content: '';
   position: absolute;
@@ -71,17 +68,12 @@
   bottom: -1px;
   background: linear-gradient(to bottom, var(--opacity-000-white-color), var(--opacity-100-white-color));
   border-radius: var(--main-radius);
-   z-index: -1;
+  z-index: -1;
   opacity: 0.4;
-  /* border: 1px solid; */
 }
 
 .Main-Popup {
-  position: absolute;
-  top: 100%;
-  right: 0;
-   margin-top: var(--inner-safe-gap);
-  /* min-width: 200px; */
+  margin-top: var(--inner-safe-gap);
   background: var(--background-color);
   border-radius: var(--main-radius);
   box-shadow: var(--unfocus-shadow);
@@ -91,12 +83,30 @@
   flex-direction: column;
   justify-content: center;
   gap: var(--inner-safe-place);
-  border: 1px solid var( --low-shade-light-gray-color);
+  border: 1px solid var(--low-shade-light-gray-color);
   animation: fade-in-down 0.7s ease 1;
   -webkit-animation: fade-in-down 0.7s ease 1;
 }
 
+.Main-Popup-Right {
+  position: absolute;
+  top: 100%;
+  right: 0;
+}
 
+
+.Main-Popup-Center {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    animation: fade-in-down-center 0.7s ease 1 !important;
+    -webkit-animation: fade-in-down-center 0.7s ease 1 !important;
+}
 
 .Popup-Item {
   padding-inline: var(--safe-place);
@@ -110,16 +120,16 @@
   flex-direction: column;
   justify-content: center;
   transition: all 0.4s;
-  border: 1px solid var( --low-shade-light-gray-color);
+  border: 1px solid var(--low-shade-light-gray-color);
   text-align: center;
   animation: fade-in-down 1s ease 1;
   -webkit-animation: fade-in-down 1s ease 1;
 }
 
 .Popup-Item:hover {
-color: var(--primary-color);
-transition: all 0.4s;
-border: 1px solid var(--primary-color-half-opacity);
+  color: var(--primary-color);
+  transition: all 0.4s;
+  border: 1px solid var(--primary-color-half-opacity);
 }
 
 .Popup-Item.active {
@@ -127,22 +137,6 @@ border: 1px solid var(--primary-color-half-opacity);
   color: var(--white-color);
   border: none;
 
-}
-
-.Main-Popup {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  margin-top: 10px;
-  background: var(--background-color);
-  border-radius: var(--main-radius);
-  box-shadow: var(--unfocus-shadow);
-  z-index: 11;
-  padding: var(--inner-safe-place);
-  display: flex;
-  flex-direction: column;
-  gap: var(--inner-safe-place);
-  border: 1px solid var(--low-shade-light-gray-color);
 }
 
 .active-icon {

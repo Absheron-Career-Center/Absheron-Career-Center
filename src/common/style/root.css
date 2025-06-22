@@ -5,6 +5,7 @@
 @import url('./color.css');
 @import url('./kit.css');
 @import url('./tickers.css');
+@import url('./item.css');
 
 * {
     margin: 0;

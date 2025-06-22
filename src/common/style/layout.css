@@ -103,6 +103,8 @@
     align-items: center;
     justify-content: center;
     height: 100%;
+    gap: 2rem;
+    font-size: var(--font-14px);
 }
 
 .Nav-Secondary-First-Section {
