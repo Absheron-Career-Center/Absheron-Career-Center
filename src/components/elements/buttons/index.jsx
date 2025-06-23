@@ -3,7 +3,7 @@ import React from 'react'
 const MainButton = () => {
     return (
         <div className="Main-Button">
-            <p>Sign up</p>
+            <p className='Main-Text-Accessibility'>Sign up</p>
         </div>
     )
 }

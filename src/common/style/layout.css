@@ -127,3 +127,70 @@
     height: 65px !important;
     width: auto;
 }
+
+.Nav-Primary-Last-Section .hr {
+    display: none;
+}
+
+
+/* ------------------------------------- */
+
+
+/* Base reset */
+
+
+/* Hamburger */
+.Hamburger-Menu {
+  display: none;
+  cursor: pointer;
+      animation: fade-in-down-50 1.5s ease 1;
+  
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .Nav-Primary-Last-Section {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70%;
+    left: 0;
+    width: 100%;
+    background: var(--white-color);
+    /* background-color: red; */
+    padding: var(--safe-place) 0 2rem 0;
+
+    box-shadow: var(--main-shadow);
+    z-index: -1;
+    border-bottom-left-radius: var(--main-radius);
+    border-bottom-right-radius: var(--main-radius);
+    height: fit-content;
+        animation: fade-in-down 0.7s ease 1;
+    -webkit-animation: fade-in-down 0.7s ease 1;
+  }
+
+  .Nav-Primary-Last-Section.Open {
+    display: flex;
+  }
+
+  .Nav-Primary-Last-Section .hr {
+    display: flex;
+}
+
+  .Hamburger-Menu {
+    display: flex;
+      align-items: center ;
+  justify-content: center ;
+
+  
+  }
+
+  .Main-Text-Accessibility {
+    font-size: 16px;
+}
+
+.Nav-Primary-First-Section, .Nav-Primary-Last-Section {
+    gap: 1rem;
+}
+}
+

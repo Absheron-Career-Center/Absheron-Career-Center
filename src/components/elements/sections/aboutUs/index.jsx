@@ -4,7 +4,7 @@ const AboutUsItem = () => {
     const { translations } = useLanguage();
 
     return (
-        <div>{translations.aboutUsItem}</div>
+        <div className='Main-Text-Accessibility'>{translations.aboutUsItem}</div>
     )
 }
 

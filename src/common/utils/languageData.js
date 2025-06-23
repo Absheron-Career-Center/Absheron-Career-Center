@@ -20,8 +20,17 @@ const languageData = [
       activitiesItem: 'Our activities',
       blogPostItem: 'Blog Posts',
       contactItem: 'Contact us',
+
       exhibitions: 'Exhibitions',
       events: 'Events',
+
+      vacancy: 'Vacancy',
+      scholarshipProgram: 'Scholarship program',
+      internshipProgram: 'Internship program',
+
+      logistics: 'Logistics',
+      humanResources: 'Human resources',
+      finance: 'Finance',
     },
   },
   {

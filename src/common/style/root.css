@@ -6,6 +6,7 @@
 @import url('./kit.css');
 @import url('./tickers.css');
 @import url('./item.css');
+@import url('./accessibility.css');
 
 * {
     margin: 0;

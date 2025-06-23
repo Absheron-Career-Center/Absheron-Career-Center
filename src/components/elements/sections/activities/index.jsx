@@ -23,7 +23,7 @@ const ActivitiesItem = () => {
     return (
         <div className={`Item-Group ${isOpen ? 'active' : ''}`} ref={popupRef}>
             <div className="Nav-Item" onClick={togglePopup}>
-                <div>{translations.activitiesItem}</div>
+                <div className='Main-Text-Accessibility'>{translations.activitiesItem}</div>
                 <img 
                     src={ChevronDown} 
                     className={`Chevron-Icon ${isOpen ? 'rotate' : ''}`} 
@@ -34,10 +34,10 @@ const ActivitiesItem = () => {
             {isOpen && (
                 <div className="Main-Popup Main-Popup-Center">
                     <div className='Popup-Item'>
-                        <p>{translations.exhibitions}</p>
+                        <p className='Main-Text-Accessibility'>{translations.exhibitions}</p>
                     </div>
                     <div className='Popup-Item'>
-                        <p>{translations.events}</p>
+                        <p className='Main-Text-Accessibility'>{translations.events}</p>
                     </div>
                 </div>
             )}

@@ -1,7 +1,7 @@
 .Item-Group, .Nav-Item {
     display: flex;
     align-items: center;
-    font-weight: 500;
+    /* font-weight: 500; */
     position: relative;
     
 }
